@@ -1,5 +1,5 @@
 //price output
-const price = document.getElementById("price");
+const priceOutput = document.getElementById("price");
 // bottone per il calcolo ticket
 const ticket = document.getElementById("ticketbtn");
 
@@ -15,14 +15,14 @@ const tot = (priceKm * km.value);
 
 // se minorenne sconto 17.5%
     if ((age.value >= 0) && (age.value < 18)) {
-        price.innerHTML = (`&euro;` + (tot - (tot * 0.175)).toFixed(2));
+        priceOutput.innerHTML = (`&euro;` + (tot - (tot * 0.175)).toFixed(2));
     } 
     // se over 65 sconto del 33.3%
     else if (age.value > 65) {
-        price.innerHTML = (`&euro;` + (tot - (tot * 0.333)).toFixed(2));
+        priceOutput.innerHTML = (`&euro;` + (tot - (tot * 0.333)).toFixed(2));
     } 
-    // tutti gli altri prezzo pieno
+    // tutti gli altri prezzo intero
     else {
-        price.innerHTML = (`&euro;` + tot.toFixed(2));
+        priceOutput.innerHTML = (`&euro;` + tot.toFixed(2));
     }
 })
